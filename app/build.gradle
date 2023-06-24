@@ -8,7 +8,7 @@ android {
     namespace 'mil.nga.mgrs.app'
 
     defaultConfig {
-        minSdkVersion 23
+        minSdkVersion 33
         targetSdkVersion 33
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -36,6 +36,23 @@ android {
 dependencies {
     api project(":mgrs")
     api 'androidx.appcompat:appcompat:1.6.0'
+    implementation "androidx.constraintlayout:constraintlayout:2.1.0"
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.libraries.places:places:3.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     androidTestImplementation 'androidx.test:core:1.5.0'
     androidTestImplementation 'androidx.test:runner:1.5.2'
+
+    //aggiunte per Room
+    def room_version = "2.5.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+
+    //rxjava
+    def rxJavaVersion = '2.1.1'
+    implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
 }

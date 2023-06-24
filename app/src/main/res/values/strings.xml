@@ -15,4 +15,14 @@
     <string name="map_type_satellite">Satellite</string>
     <string name="map_type_terrain">Terrain</string>
     <string name="map_type_hybrid">Hybrid</string>
+    <string name="maps_api_key">AIzaSyAPDnojT1BuZ216jsoJKJ9jpSVXnpkLYD0</string>
+    <string name="zoom_level_dialog_title">Selezionare precisione della griglia</string>
+    <string name="settings_dialog_title">Selezionare tipologia di mappa </string>
+
+    <string-array name="inputObservationTypeDialog">
+        <item>RUMORE</item>
+        <item>LTE</item>
+        <item>WI-FI</item>
+    </string-array>
+
 </resources>

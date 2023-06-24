@@ -1,20 +1,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="#FFFFFF"
+    android:backgroundTint="#FAF9F9"
+    android:orientation="vertical"
+    android:id="@+id/fragmentContainer">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <fragment xmlns:tools="http://schemas.android.com/tools"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            card_view:cardBackgroundColor="@color/quantum_white_100"
+            card_view:cardCornerRadius="4dp">
+            <fragment
+                android:id="@+id/autocomplete_fragment"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".MapsActivity" />
+
+
+
 
         <ImageView
             android:layout_width="48dip"
@@ -25,8 +51,50 @@
             android:src="@drawable/ic_add_black_24dp"
             app:tint="#FF0000" />
 
+
     </RelativeLayout>
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/observationTypeMapBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_baseline_map_24"
+            android:textIsSelectable="true" />
+
+        <ImageButton
+            android:id="@+id/zoomLevelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/inputSettingsBtn"
+            android:alpha=".5"
+            android:background="@null"
+            android:paddingLeft="15dp"
+            android:src="@drawable/ic_baseline_zoom_out_map_24"
+            android:textIsSelectable="true" />
+
+        <ImageButton
+            android:id="@+id/inputSettingsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:alpha=".5"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_baseline_input_24"
+            android:textIsSelectable="true" />
+
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"

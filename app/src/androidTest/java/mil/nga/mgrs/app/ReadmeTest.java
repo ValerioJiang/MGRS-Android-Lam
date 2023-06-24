@@ -22,11 +22,7 @@ import mil.nga.mgrs.grid.GridType;
 import mil.nga.mgrs.grid.style.Grids;
 import mil.nga.mgrs.tile.MGRSTileProvider;
 
-/**
- * README example tests
- *
- * @author osbornb
- */
+
 @RunWith(AndroidJUnit4ClassRunner.class)
 public class ReadmeTest {
 
